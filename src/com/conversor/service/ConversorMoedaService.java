@@ -53,11 +53,32 @@ public class ConversorMoedaService {
 			case "De Reais a Iene (JPY)":
 				dinheiro.reaisParaIeneJPY();
 				break;
-			case "De Reais a Won Sul Coreano (KRW)":
+			case "De Reais a Won(KRW)":
 				dinheiro.reaisParaWonKRW();
 				break;
 			case "De Dólares a Reais (BRL)":
 				dinheiro.dolaresParaReaisBRL();
+				break;
+			case "De Euro a Reais (BRL)":
+				dinheiro.euroParaReaisBRL();
+				break;
+			case "De Libra (GIP) a Reais (BRL)":
+				dinheiro.libraGIPparaReaisBRL();
+				break;
+			case "De Libra (GBP) a Reais (BRL)":
+				dinheiro.libraGBPparaReaisBRL();
+				break;
+			case "De Peso (ARS) a Reais (BRL)":
+				dinheiro.pesoARSparaReaisBRL();
+				break;
+			case "De Peso (CLP) a Reais (BRL)":
+				dinheiro.pesoCLPparaReaisBRL();
+				break;
+			case "De Iene a Reais (BRL)":
+				dinheiro.ieneJPYparaReaisBRL();
+				break;
+			case "De Won (KRW) a Reais (BRL)":
+				dinheiro.wonKRWparaReaisBRL();
 				break;
 		}
 		return dinheiro; 

@@ -9,8 +9,11 @@ public class CriacaoMenuMoedaService {
 	private Janela janela;
 	public final Object[] opcoes = {
 			"De Reais a Dólares (USD)", "De Reais a Euro (EUR)", "De Reais a Libra (GIP)",
-			"De Reais a Libra (GIP)", "De Reais a Peso (ARS)", "De Reais a Peso (CLP)",
-			"De Reais a Iene (JPY)", "De Reais a Won Sul Coreano (KRW)", "De Dólares a Reais (BRL)"};
+			"De Reais a Libra (GBP)", "De Reais a Peso (ARS)", "De Reais a Peso (CLP)",
+			"De Reais a Iene (JPY)", "De Reais a Won (KRW)", "De Dólares a Reais (BRL)",
+			"De Euro a Reais (BRL)", "De Libra (GIP) a Reais (BRL)", "De Libra (GBP) a Reais (BRL)",
+			"De Peso (ARS) a Reais (BRL)", "De Peso (CLP) a Reais (BRL)", "De Iene a Reais (BRL)",
+			"De Won (KRW) a Reais (BRL)"};
 	
 	public CriacaoMenuMoedaService(Menu menu, Janela janela) {
 		this.menu = menu;

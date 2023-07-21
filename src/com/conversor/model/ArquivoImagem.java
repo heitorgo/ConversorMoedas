@@ -8,7 +8,6 @@ public class ArquivoImagem extends File{
 
 	public ArquivoImagem(String pathname) {
 		super(pathname);
-		// TODO Auto-generated constructor stub
 	}
 
 }

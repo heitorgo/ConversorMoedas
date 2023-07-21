@@ -8,8 +8,8 @@ import javax.swing.JFrame;
 public class Janela extends JFrame{
 	
 	private static final long serialVersionUID = 1L;
-	private final String imgPath= "C:\\PROJECTS\\Eclipse\\conversorMoedas\\src\\assets\\img";
-	ArquivoImagem imagem = new ArquivoImagem(imgPath +"\\background-pixabay.png");
+	private final String imgPath= System.getProperty("user.dir");
+	ArquivoImagem imagem = new ArquivoImagem(imgPath +"\\assets\\\\img\\Background.png");
 	
 	public void criarJanelaConversor() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -17,10 +17,10 @@ public class Janela extends JFrame{
 		setVisible(true);
 		setLocationRelativeTo(null);
 		setTitle("Conversor");
-		criarImagemFundo();
+		criarImagemFundo(imagem);
 	}
 	
-	private void criarImagemFundo() {
+	private void criarImagemFundo(ArquivoImagem imagem) {
 		try {
 			BufferedImage imagemBackground = ImageIO.read(imagem);
 			 setContentPane(new ImagemPainel(imagemBackground));
