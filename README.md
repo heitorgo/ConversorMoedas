@@ -5,7 +5,7 @@
 
 <p align="center">
  <a href="#pre-requisitos">Pré-requisitos</a> •
- <a href="#clonando-o-repositorio-para-rodar/editar-o-codigo">Clonando o repositório para rodar/editar o código</a> • 
+ <a href="#computer-clonando-o-repositório-para-rodareditar-o-código-">Clonando o repositório para rodar/editar o código</a> • 
  <a href="#tecnologias">Tecnologias</a> •
  <a href="#autor">Autor</a>
 </p>
