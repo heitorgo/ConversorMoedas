@@ -9,21 +9,21 @@ public class Janela extends JFrame{
 	
 	private static final long serialVersionUID = 1L;
 	private final String imgPath= System.getProperty("user.dir");
-	ArquivoImagem imagem = new ArquivoImagem(imgPath +"\\assets\\\\img\\Background.png");
+	ArquivoImagem imagemBackground = new ArquivoImagem(imgPath +"\\assets\\\\img\\Background.png");
 	
-	public void criarJanelaConversor() {
+	public void definirJanelaConversor() {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setSize(800,543);  
+		setSize(800,543);
 		setVisible(true);
 		setLocationRelativeTo(null);
 		setTitle("Conversor");
-		criarImagemFundo(imagem);
+		definirImagemFundo(imagemBackground);
 	}
 	
-	private void criarImagemFundo(ArquivoImagem imagem) {
+	private void definirImagemFundo(ArquivoImagem imagem) {
 		try {
 			BufferedImage imagemBackground = ImageIO.read(imagem);
-			 setContentPane(new ImagemPainel(imagemBackground));
+			setContentPane(new ImagemPainel(imagemBackground));
 		}catch (IOException e) {
 			e.printStackTrace();
 		}

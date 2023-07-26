@@ -7,20 +7,30 @@ public class CriacaoMenuService {
 	
 	private Menu menu;
 	private Janela janela;
-	private static final Object[] opcoes = {
-			"Conversor de moedas"};
+	private Object[] opcoes = {"Conversor de moedas", "Conversor de temperatura"};
 	
 	public CriacaoMenuService(Menu menu, Janela janela) {
 		this.menu=menu;
 		this.janela=janela;
 	}
 	
-	public void criarJanelaConversor() {
-		janela.criarJanelaConversor();
+	public Object criarMenuInput(String mensagemTitulo, String mensagemInput) {
+		Object input = menu.criarMenuInput(janela, mensagemInput, mensagemTitulo);
+		return input;
+	}
+	
+	public Object criarMenuInputValor() {
+		Object valorInput = menu.criarMenuInput(janela, "Insira um valor", "Input");
+		return valorInput;
+	}
+	
+	public Object criarMenuEscolha(String mensagemInput, String mensagemTitulo, Object[] opcoes) {
+		Object escolha = menu.criarMenuInput(janela, mensagemInput, mensagemTitulo, opcoes);
+		return escolha;
 	}
 	
 	public Object criarMenuEscolhaConversor() {
-		Object escolha = menu.criarMenuInput(this.janela, "Escolha uma opção", "Menu", opcoes);
+		Object escolha = menu.criarMenuInput(janela, "Escolha uma opção", "Menu", opcoes);
 		return escolha;
 	}
 	

@@ -2,35 +2,29 @@ package com.conversor.service;
 
 import java.math.BigDecimal;
 
-import com.conversor.exceptions.ErroConvercaoValorException;
+import com.conversor.exceptions.ErroValorInputInvalidoException;
 import com.conversor.model.Dinheiro;
 
 public class ConversorMoedaService {
 	
 	private CriacaoMenuMoedaService criacaoMenuMoedaService;
-	Object valorInput;
-	BigDecimal valor;
-	Dinheiro dinheiro;
-	private static final String mensagemErroConvercao = "O valor %s não é aceito pelo conversor. "
-			+ "Por favor informe apenas números";
 	
 	public ConversorMoedaService(CriacaoMenuMoedaService criacaoMenuMoedaService) {
 		this.criacaoMenuMoedaService = criacaoMenuMoedaService;
 	}
 	
-	public Dinheiro valorMoedaConvercao() {
+	public Dinheiro valorConvercao(Object valorInput) {
 		try {
-			this.valorInput = criacaoMenuMoedaService.criarMenuInputValor();
-			this.valor = new BigDecimal(valorInput.toString());
-			this.dinheiro = new Dinheiro(valor);
+			BigDecimal valor = new BigDecimal(valorInput.toString());
+			Dinheiro dinheiro = new Dinheiro(valor);
 			return conversaoMoeda(dinheiro);
 		}catch(NumberFormatException ex) {
-			throw new ErroConvercaoValorException(String.format(mensagemErroConvercao, valorInput));
+			throw new ErroValorInputInvalidoException(valorInput);
 		}
 	}
 	
 	private Dinheiro conversaoMoeda(Dinheiro dinheiro) {
-		Object conversao = this.criacaoMenuMoedaService.criarMenuEscolhaConvercaoMoeda();
+		Object conversao = criacaoMenuMoedaService.criarMenuEscolhaConvercaoMoeda();
 		switch(conversao.toString()) {
 			case "De Reais a Dólares (USD)":
 				dinheiro.reaisParaDolarUSD();

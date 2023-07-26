@@ -2,6 +2,8 @@
 
 ## Sistema para realizar conversoes de moedas feito em java utilizando a biblioteca swing para interações gráficas com o usuário.
 
+<img src="./assets/img/banner.PNG" alt="banner do projeto"/>
+
 
 <p align="center">
  <a href="#pre-requisitos">Pré-requisitos</a> •
@@ -36,7 +38,7 @@ Ferramentas usadas na construção do projeto:
 ## Autor
 ---
 
-<img style="border-radius: 50%;" src="./assets/img/Autor.jpg" width="100px;" alt=""/>
+<img style="border-radius: 50%;" src="./assets/img/Autor.jpg" width="100px;" alt="Autor"/>
 <br/>
 <sub><b>Heitor Gonçalves</b></sub>
 
