@@ -1,6 +1,6 @@
 # Conversor de Moedas
 
-## Sistema para realizar conversoes de moedas feito em java utilizando a biblioteca swing para interações gráficas com o usuário.
+## Sistema para realizar conversoes de valores feito em java utilizando a biblioteca swing para interações gráficas com o usuário.
 
 <img src="./assets/img/banner.PNG" alt="banner do projeto"/>
 
